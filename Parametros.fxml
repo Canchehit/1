@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="734.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemastickets.ParametrosController">
+    <stylesheets>
+        <URL value="@parametros.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
+         <children>
+            <Label layoutX="35.0" layoutY="35.0" text="CONFIGURACIÓN">
+               <font>
+                  <Font name="Bauhaus 93" size="53.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="131.0" fitWidth="225.0" layoutX="495.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/image-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="131.0" prefHeight="459.0" prefWidth="734.0" style="-fx-background-color: #FFDE59;">
+         <children>
+            <TextField fx:id="nombreEmpresa" layoutX="69.0" layoutY="38.0" prefHeight="25.0" prefWidth="231.0" />
+            <Label fx:id="label2" layoutX="67.0" layoutY="261.0" text="Idiomas" />
+            <ComboBox fx:id="zonaHorariaComboBox" layoutX="61.0" layoutY="352.0" onAction="#Select" prefWidth="150.0" />
+            <Label fx:id="label3" layoutX="65.0" layoutY="330.0" text="Zona Horaria" />
+            <Label fx:id="label4" layoutX="56.0" layoutY="395.0" text="Tiempo de Vencimiento" />
+            <Label layoutX="75.0" layoutY="17.0" text="Nombre de la empresa" />
+            <Label layoutX="75.0" layoutY="77.0" text="Logo" />
+            <HBox layoutX="69.0" layoutY="100.0" prefHeight="152.0" prefWidth="297.0">
+               <children>
+                  <Button fx:id="btnCargarLogo" mnemonicParsing="false" text="Cargar Logo" />
+                  <ImageView fx:id="logoPreview" fitHeight="152.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/image-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ComboBox fx:id="idiomaComboBox" layoutX="61.0" layoutY="286.0" prefWidth="150.0" />
+            <Spinner layoutX="56.0" layoutY="420.0" />
+            <Label layoutX="396.0" layoutY="17.0" text="Niveles de Prioridad" />
+            <ListView fx:id="listaPrioridades" layoutX="396.0" layoutY="51.0" prefHeight="62.0" prefWidth="231.0" />
+            <HBox layoutX="427.0" layoutY="407.0" prefHeight="26.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" text="Guardar" />
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" text="Cancelar" />
+                  <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#volverAlMenu" text="Menu" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CharmListView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemastickets.EstadoTicketsController">
+    <stylesheets>
+        <URL value="@estadotickets.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
+         <children>
+            <Label layoutX="35.0" layoutY="35.0" text="ESTADO DE LOS TICKET">
+               <font>
+                  <Font name="Bauhaus 93" size="45.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="131.0" fitWidth="225.0" layoutX="495.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/image-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="131.0" prefHeight="418.0" prefWidth="734.0" style="-fx-background-color: #FFDE59;">
+         <children>
+            <Label fx:id="labelrol" layoutX="58.0" layoutY="14.0" text="Nombre del Estado" />
+            <Label fx:id="labelpermisos" layoutX="55.0" layoutY="242.0" text="Estados Permitidos" />
+            <Label layoutX="58.0" layoutY="77.0" text="Descripccion" />
+            <Label layoutX="60.0" layoutY="183.0" text="Estado Final" />
+            <TextArea fx:id="descripcionEstado" layoutX="58.0" layoutY="107.0" prefHeight="62.0" prefWidth="394.0" />
+            <HBox layoutX="424.0" layoutY="360.0" prefHeight="26.0" prefWidth="263.0">
+               <children>
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Guardar" />
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" text="Cancelar " />
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Eliminar" />
+                  <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#volverAlMenu" prefHeight="26.0" prefWidth="54.0" text="Menu" />
+               </children>
+            </HBox>
+            <TextField fx:id="nombreEstado" layoutX="58.0" layoutY="38.0" prefHeight="25.0" prefWidth="394.0" />
+            <CheckBox fx:id="estadoFinal" layoutX="55.0" layoutY="209.0" mnemonicParsing="false" text="Si" />
+            <CheckBox fx:id="estadoFinal1" layoutX="93.0" layoutY="209.0" mnemonicParsing="false" text="No" />
+            <CharmListView layoutX="54.0" layoutY="265.0" prefHeight="131.0" prefWidth="138.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
