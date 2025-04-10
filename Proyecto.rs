@@ -1,3 +1,0 @@
-Proyecto
-Producto
-Proyecto$Producto
