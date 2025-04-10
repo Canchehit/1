@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemastickets.RolesyPermisosController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.RolesyPermisosController">
     <stylesheets>
-        <URL value="@rolesypermisos.css" />
+        <URL value="@rolesypermisos.css"/>
     </stylesheets>
-   <children>
+    <children>
       <Pane prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
          <children>
             <Label layoutX="35.0" layoutY="35.0" text="REGISTRO DE USUARIO">
@@ -43,7 +43,7 @@
                <children>
                   <Button fx:id="btnGuardar" mnemonicParsing="false" text="Guardar" />
                   <Button fx:id="btnCancelar" mnemonicParsing="false" text="Cancelar" />
-                  <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#volverAlMenu" prefHeight="26.0" prefWidth="54.0" text="Menu" />
+                  <Button fx:id="btnVolver" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" text="Menu" />
                </children>
             </HBox>
             <TextField fx:id="nombreCompleto" layoutX="60.0" layoutY="42.0" prefHeight="25.0" prefWidth="394.0" />

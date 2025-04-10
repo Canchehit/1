@@ -2,23 +2,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package sistemastickets;
+package sistematickets1;
 
-import java.net.URL;import java.util.ResourceBundle;
-
-import javafx.fxml.Initializable;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * FXML Controller class
+ *
+ * @author luisa
+ */
 public class ListaSolicitudesController extends Application {
 
-   private TableView<Ticket> ticketTable;
-    private ObservableList<Ticket> ticketList;
+   private TableView<Tickets> ticketTable;
+    private ObservableList<Tickets> ticketList;
   private Button btnVolver;
 
     @Override
@@ -27,19 +38,19 @@ public class ListaSolicitudesController extends Application {
         
         // Tabla de tickets
         ticketTable = new TableView<>();
-        TableColumn<Ticket, String> numberColumn = new TableColumn<>("Número de Ticket");
-        TableColumn<Ticket, String> statusColumn = new TableColumn<>("Estado");
-        TableColumn<Ticket, String> dateColumn = new TableColumn<>("Fecha de Creación");
-        TableColumn<Ticket, String> deptColumn = new TableColumn<>("Departamento");
-        TableColumn<Ticket, String> priorityColumn = new TableColumn<>("Prioridad");
-        TableColumn<Ticket, String> summaryColumn = new TableColumn<>("Resumen");
+        TableColumn<Tickets, String> numberColumn = new TableColumn<>("Número de Ticket");
+        TableColumn<Tickets, String> statusColumn = new TableColumn<>("Estado");
+        TableColumn<Tickets, String> dateColumn = new TableColumn<>("Fecha de Creación");
+        TableColumn<Tickets, String> deptColumn = new TableColumn<>("Departamento");
+        TableColumn<Tickets, String> priorityColumn = new TableColumn<>("Prioridad");
+        TableColumn<Tickets, String> summaryColumn = new TableColumn<>("Resumen");
         
         ticketTable.getColumns().addAll(numberColumn, statusColumn, dateColumn, deptColumn, priorityColumn, summaryColumn);
         
         // Lista de tickets (datos de prueba)
         ticketList = FXCollections.observableArrayList(
-            new Ticket("1", "Pendiente", "2025-03-26", "Soporte", "Alta", "Problema con la red"),
-            new Ticket("2", "En proceso", "2025-03-25", "IT", "Media", "Error en el sistema")
+            new Tickets("1", "Pendiente", "2025-03-26", "Soporte", "Alta", "Problema con la red"),
+            new Tickets("2", "En proceso", "2025-03-25", "IT", "Media", "Error en el sistema")
         );
         ticketTable.setItems(ticketList);
         
@@ -67,14 +78,15 @@ public class ListaSolicitudesController extends Application {
         alerta.setContentText("Funcionalidad para cambiar de escena aún no implementada.");
         alerta.showAndWait(); 
      }
+  
 
     
     private void applyFilters(TextField searchField, ComboBox<String> statusFilter) {
         String searchText = searchField.getText();
         String selectedStatus = statusFilter.getValue();
         
-        ObservableList<Ticket> filteredList = FXCollections.observableArrayList();
-        for (Ticket ticket : ticketList) {
+        ObservableList<Tickets> filteredList = FXCollections.observableArrayList();
+        for (Tickets ticket : ticketList) {
             boolean matchesSearch = searchText.isEmpty() || ticket.getNumber().contains(searchText);
             boolean matchesStatus = selectedStatus == null || ticket.getStatus().equals(selectedStatus);
             
@@ -89,41 +101,33 @@ public class ListaSolicitudesController extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    
+    
 }
 
-class Tickets1 {
-    private String number;
-    private String status;
-    private String date;
-    private String department;
-    private String priority;
-    private String summary;
-    
-    public Tickets1(String number, String status, String date, String department, String priority, String summary) {
-        this.number = number;
-        this.status = status;
-        this.date = date;
-        this.department = department;
-        this.priority = priority;
-        this.summary = summary;
+ class Tickets {
+    private String id;
+    private String estado;
+    private String fecha;
+    private String departamento;
+    private String prioridad;
+    private String descripcion;
+
+    // Constructor correcto con los 6 parámetros
+    public Tickets(String id, String estado, String fecha, String departamento, String prioridad, String descripcion) {
+        this.id = id;
+        this.estado = estado;
+        this.fecha = fecha;
+        this.departamento = departamento;
+        this.prioridad = prioridad;
+        this.descripcion = descripcion;
     }
-    
-    public String getNumber() { return number; }
-    public String getStatus() { return status; }
-    public String getDate() { return date; }
-    public String getDepartment() { return department; }
-    public String getPriority() { return priority; }
-    public String getSummary() { return summary; }
+    public String getNumber() {
+    return id; // Suponiendo que el número del ticket es el ID
+}
 
-    void ticketNumberProperty() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void addComment(String comment) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    
-
+public String getStatus() {
+    return estado;
+}
 }
 

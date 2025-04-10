@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package sistemastickets;
+package sistematickets1;
 
 import java.awt.event.ActionEvent;
 import java.net.URL;
@@ -25,9 +25,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import java.io.File;
 import static javafx.application.Application.launch;
+
 public class ParametrosController extends Application {
    private TextField nombreEmpresa;
     private ImageView logoPreview;
@@ -68,8 +73,7 @@ public class ParametrosController extends Application {
         btnCancelar = new Button("Cancelar");
         btnCancelar.setOnAction(e -> cancelarConfiguracion());
         
-       Button btnVolver = new Button("Volver al Menú");
-        btnVolver.setOnAction(e -> volverAlMenu(primaryStage));
+      
         
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(10));
@@ -128,10 +132,13 @@ public class ParametrosController extends Application {
         launch(args);
     }
 
-   private void volverAlMenu(Stage primaryStage) {
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("Volver al Menú");
-        alerta.setContentText("Funcionalidad para cambiar de escena aún no implementada.");
-        alerta.showAndWait();
+  
+    @FXML
+    private void volverAlMenu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/views/Menu.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }
+

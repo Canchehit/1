@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemastickets.RegistrarDepartamentosOAreasController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.RegistrarDepartamentosOAreasController">
     <stylesheets>
-        <URL value="@registrardepartamentosoareas.css" />
+        <URL value="@registrardepartamentosoareas.css"/>
     </stylesheets>
-   <children>
+    <children>
       <Pane prefHeight="132.0" prefWidth="735.0" style="-fx-background-color: #F8B85A;">
          <children>
             <Label layoutX="29.0" layoutY="45.0" text="DEPARTAMENTOS O AREAS">
@@ -47,7 +47,7 @@
                <children>
                   <Button fx:id="btnAgregar" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Agregar" />
                   <Button fx:id="btnEliminar" mnemonicParsing="false" prefHeight="26.0" prefWidth="71.0" text="Eliminar" />
-                  <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#volverAlMenu" text="Menu" />
+                  <Button fx:id="btnVolver" mnemonicParsing="false" text="Menu" />
                </children>
             </HBox>
          </children>

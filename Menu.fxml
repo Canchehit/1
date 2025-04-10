@@ -9,15 +9,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="731.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemastickets.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.MenuController">
     <stylesheets>
-        <URL value="@menu.css" />
+        <URL value="@menu.css"/>
     </stylesheets>
-   <children>
+    <children>
       <AnchorPane layoutY="36.0" prefHeight="200.0" prefWidth="200.0" />
       <Pane layoutY="131.0" prefHeight="390.0" prefWidth="734.0" style="-fx-background-color: #FFDE59;">
          <children>
-            <Button fx:id="butonparametros" layoutX="71.0" layoutY="19.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Parametros" textFill="#150000">
+            <Button fx:id="btnParametros" layoutX="71.0" layoutY="19.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Parametros" textFill="#150000">
                <font>
                   <Font name="Bernard MT Condensed" size="14.0" />
                </font>
@@ -27,37 +27,37 @@
                   <Image url="@imagenes/management.png" />
                </image>
             </ImageView>
-            <Button fx:id="butonrolesypermisos" layoutX="71.0" layoutY="83.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Roles y Permisos" textFill="#150000">
+            <Button fx:id="btnRolesPermisos" layoutX="71.0" layoutY="83.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Roles y Permisos" textFill="#150000">
                <font>
                   <Font name="Bernard MT Condensed" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="butonticket" layoutX="459.0" layoutY="19.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Estado del Ticket" textFill="#150000">
+            <Button fx:id="btnEstadoTicket" layoutX="459.0" layoutY="19.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Estado del Ticket" textFill="#150000">
                <font>
                   <Font name="Bernard MT Condensed" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="butondepartamentos" layoutX="71.0" layoutY="146.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="163.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Departamentos o Areas" textFill="#150000">
+            <Button fx:id="btnDepartamentos" layoutX="71.0" layoutY="146.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="163.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Departamentos o Areas" textFill="#150000">
                <font>
                   <Font name="Bernard MT Condensed" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="butontrabajo" layoutX="459.0" layoutY="83.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Flujo de Trabajo" textFill="#150000">
+            <Button fx:id="btnFlujoTrabajo" layoutX="459.0" layoutY="83.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Flujo de Trabajo" textFill="#150000">
                <font>
                   <Font name="Bernard MT Condensed" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="butonlista" layoutX="459.0" layoutY="204.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Lista de solicitudes" textFill="#150000">
+            <Button fx:id="btnListaSolicitudes" layoutX="459.0" layoutY="204.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Lista de solicitudes" textFill="#150000">
                <font>
                   <Font name="Bernard MT Condensed" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="butongestionticket" layoutX="459.0" layoutY="141.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Gestion de Ticket" textFill="#150000">
+            <Button fx:id="btnGestionTicket" layoutX="459.0" layoutY="141.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Gestion de Ticket" textFill="#150000">
                <font>
                   <Font name="Bernard MT Condensed" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="butonusuarios" layoutX="71.0" layoutY="204.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Usuarios" textFill="#150000">
+            <Button fx:id="btnUsuarios" layoutX="71.0" layoutY="204.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Usuarios" textFill="#150000">
                <font>
                   <Font name="Bernard MT Condensed" size="14.0" />
                </font>
@@ -97,7 +97,7 @@
                   <Image url="@imagenes/list.png" />
                </image>
             </ImageView>
-            <Button fx:id="butonsalir" layoutX="317.0" layoutY="302.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="101.0" text="Salir" />
+            <Button fx:id="btnSalir" layoutX="317.0" layoutY="302.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="101.0" text="Salir" />
          </children>
       </Pane>
       <Pane prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">

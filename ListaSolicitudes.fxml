@@ -12,12 +12,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemastickets.ListaSolicitudesController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.ListaSolicitudesController">
     <stylesheets>
-        <URL value="@listasolicitudes.css" />
+        <URL value="@listasolicitudes.css"/>
     </stylesheets>
-   <children>
+    <children>
       <Pane layoutX="-14.0" prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
          <children>
             <Label layoutX="35.0" layoutY="35.0" text="LISTA DE SOLICITUDES PENDIENTES">
@@ -50,7 +49,7 @@
               </columns>
             </TableView>
             <Label layoutX="65.0" layoutY="160.0" text="Tabla de TIckets" />
-            <Button fx:id="btnVolver" layoutX="639.0" layoutY="349.0" mnemonicParsing="false" onAction="#volverAlMenu" text="Menu" />
+            <Button fx:id="btnVolver" layoutX="639.0" layoutY="349.0" mnemonicParsing="false" text="Menu" />
          </children>
       </Pane>
    </children>

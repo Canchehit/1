@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemastickets.RegistrarUsuariosController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.RegistrarUsuariosController">
     <stylesheets>
-        <URL value="@registrarusuarios.css" />
+        <URL value="@registrarusuarios.css"/>
     </stylesheets>
-   <children>
+    <children>
       <Pane prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
          <children>
             <Label layoutX="35.0" layoutY="35.0" text="ROLES Y PERMISOS">
@@ -46,7 +46,7 @@
                <children>
                   <Button fx:id="btnGuardar" mnemonicParsing="false" text="Guardar" />
                   <Button fx:id="btnEliminar" mnemonicParsing="false" text="Eliminar" />
-                  <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#volverAlMenu" prefHeight="26.0" prefWidth="54.0" text="Menu" />
+                  <Button fx:id="btnVolver" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" text="Menu" />
                </children>
             </HBox>
          </children>

@@ -2,17 +2,32 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package sistemastickets;
+package sistematickets1;
 
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.application.Application;
-import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
+/**
+ * FXML Controller class
+ *
+ * @author luisa
+ */
 public class EstadoTicketsController extends Application {
 
     
@@ -72,12 +87,13 @@ public class EstadoTicketsController extends Application {
         }
         mostrarAlerta("Información", "Estado eliminado correctamente.");
     }
-   private void volverAlMenu(Stage primaryStage) {
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("Volver al Menú");
-        alerta.setContentText("Funcionalidad para cambiar de escena aún no implementada.");
-        alerta.showAndWait(); 
-     }
+   @FXML
+    private void volverAlMenu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/views/Menu.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
     // Método para mostrar alertas
     private void mostrarAlerta(String titulo, String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);

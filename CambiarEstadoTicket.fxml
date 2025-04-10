@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemastickets.CambiarEstadoTicketController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.CambiarEstadoTicketController">
     <stylesheets>
-        <URL value="@cambiarestadoticket.css" />
+        <URL value="@cambiarestadoticket.css"/>
     </stylesheets>
-   <children>
+     <children>
       <Pane layoutX="-19.0" prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
          <children>
             <Label layoutX="35.0" layoutY="35.0" text="CAMBIAR ESTDADO DE UN TICKET">
@@ -50,7 +50,7 @@
                <children>
                   <Button fx:id="changeStatusButton" mnemonicParsing="false" text="Cambiar" />
                   <Button fx:id="cancelButton" mnemonicParsing="false" text="Cancelar" />
-                  <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#volverAlMenu" text="Menu" />
+                  <Button fx:id="btnVolver" mnemonicParsing="false" text="Menu" />
                </children>
             </HBox>
          </children>
