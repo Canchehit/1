@@ -4,17 +4,35 @@
  */
 package sistematickets1;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 /**
  *
  * @author luisa
  */
-public class SistemaTickets1 {
+public class SistemaTickets1 extends Application{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    @Override
+   
+        
+       public void start(Stage primaryStage) throws Exception {
+
+        Parent root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
+
+        primaryStage.setTitle("Menu");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
+
+  
+    public static void main(String[] args) {
+        launch(args);
+        
+    }
+    
     
 }
