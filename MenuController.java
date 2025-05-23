@@ -23,7 +23,7 @@ public class MenuController extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Menú Principal");
         
-        // Crear botones
+ 
         Button btnParametros = new Button("Parámetros");
         Button btnRolesPermisos = new Button("Roles y Permisos");
         Button btnDepartamentos = new Button("Departamentos o Áreas");
@@ -33,9 +33,10 @@ public class MenuController extends Application {
         Button btnGestionTicket = new Button("Gestión de Ticket");
         Button btnListaSolicitudes = new Button("Lista de Solicitudes");
         Button btnConfiguraciones = new Button("Configuraciones");
+        Button btnTicket = new Button("Ticket");
         Button btnSalir = new Button("Salir");
         
-        // Acciones de los botones
+     
         btnParametros.setOnAction(e -> abrirVentana("Parámetros"));
         btnRolesPermisos.setOnAction(e -> abrirVentana("Roles y Permisos"));
         btnDepartamentos.setOnAction(e -> abrirVentana("Departamentos o Áreas"));
@@ -45,9 +46,10 @@ public class MenuController extends Application {
         btnGestionTicket.setOnAction(e -> abrirVentana("Gestión de Ticket"));
         btnListaSolicitudes.setOnAction(e -> abrirVentana("Lista de Solicitudes"));
         btnConfiguraciones.setOnAction(e -> abrirVentana("Configuraciones"));
+        btnTicket.setOnAction(e -> abrirVentana("Configuraciones"));
         btnSalir.setOnAction(e -> primaryStage.close());
         
-        // Layout
+
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20));
         layout.getChildren().addAll(
@@ -56,7 +58,7 @@ public class MenuController extends Application {
             btnConfiguraciones, btnSalir
         );
         
-        // Escena
+
         Scene scene = new Scene(layout, 300, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
