@@ -4,44 +4,30 @@
  */
 package sistematickets1;
 
-import java.awt.event.ActionEvent;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+import static javafx.application.Application.launch;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
+import javafx.scene.control.ListView;
+import java.util.List; 
 
-
-/**
- * FXML Controller class
- *
- * @author luisa
- */
 public class TicketController  {
 
     private GestorDeCola gestorCola = new GestorDeCola();
     private Ticket ticketActual;
-    private Button btnVolver;
-    
+
+
     @FXML
     private ListView<String> listaTickets;
     @FXML
     private TextArea descripcionArea;
     @FXML
     private Label labelTicketActual;
-  
-  
+    
+
+
     @FXML
-    private void onAgregarTicket() {
+    private void AgregarTicket() {
         String desc = descripcionArea.getText();
         if (!desc.isEmpty()) {
             Ticket nuevo = new Ticket(generarId(), desc);
@@ -51,7 +37,7 @@ public class TicketController  {
     }
 
     @FXML
-    private void onAtenderTicket() {
+    private void AtenderTicket() {
         ticketActual = gestorCola.atenderTicket();
         if (ticketActual != null) {
             labelTicketActual.setText("Atendiendo ticket ID: " + ticketActual.getId());
@@ -61,14 +47,14 @@ public class TicketController  {
     }
 
     @FXML
-    private void onGuardarCambio() {
+    private void GuardarCambio() {
         if (ticketActual != null) {
             ticketActual.actualizarDescripcion(descripcionArea.getText());
         }
     }
 
     @FXML
-    private void onDeshacerCambio() {
+    private void DeshacerCambio() {
         if (ticketActual != null) {
             ticketActual.deshacerCambio();
             descripcionArea.setText(ticketActual.getDescripcion());
@@ -81,17 +67,12 @@ public class TicketController  {
             listaTickets.getItems().add("ID " + t.getId() + ": " + t.getDescripcion());
         }
     }
-    
-       
 
     private int generarId() {
-        return (int)(Math.random() * 10000); // ejemplo simple, reemplaza con algo mejor si ya tienes lógica
+        return (int)(Math.random() * 10000);
     }
-      @FXML
-    private void volverAlMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/views/Menu.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+      public static void main(String[] args) {
+        launch(args);
+        
     }
 }

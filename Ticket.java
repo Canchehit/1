@@ -1,17 +1,18 @@
+package sistematickets1;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package sistematickets1;
-
-import java.util.Stack;
 
 /**
  *
  * @author luisa
  */
+import java.util.Stack;
+
 public class Ticket {
-       private int id;
+    private int id;
     private String descripcion;
     private Stack<String> historial = new Stack<>();
 
@@ -38,6 +39,12 @@ public class Ticket {
             this.descripcion = historial.pop();
         }
     }
+
+    
+
 }
- 
+
+
+    
+    
 
