@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.MenuController">
     <stylesheets>
-        <URL value="@menu.css"/>
+        <URL value="@menu.css" />
     </stylesheets>
     <children>
       <AnchorPane layoutY="36.0" prefHeight="200.0" prefWidth="200.0" />
-      <Pane layoutY="131.0" prefHeight="390.0" prefWidth="734.0" style="-fx-background-color: #FFDE59;">
+      <Pane layoutY="123.0" prefHeight="390.0" prefWidth="734.0" style="-fx-background-color: #FFDE59;">
          <children>
             <Button fx:id="btnParametros" layoutX="71.0" layoutY="19.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Parametros" textFill="#150000">
                <font>
@@ -98,6 +98,11 @@
                </image>
             </ImageView>
             <Button fx:id="btnSalir" layoutX="317.0" layoutY="302.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="101.0" text="Salir" />
+            <Button fx:id="btnListaSolicitudes1" layoutX="459.0" layoutY="263.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #F8B85A; -fx-cursor: hard;" text="Ticket" textFill="#150000">
+               <font>
+                  <Font name="Bernard MT Condensed" size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <Pane prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
