@@ -3,6 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -13,9 +14,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.EstadoTicketsController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.EstadoTicketsController">
     <stylesheets>
-        <URL value="@estadotickets.css"/>
+        <URL value="@estadotickets.css" />
     </stylesheets>
     <children>
       <Pane prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
@@ -50,6 +51,7 @@
             <TextField fx:id="nombreEstado" layoutX="58.0" layoutY="38.0" prefHeight="25.0" prefWidth="394.0" />
             <CheckBox fx:id="estadoFinal" layoutX="55.0" layoutY="209.0" mnemonicParsing="false" text="Si" />
             <CheckBox fx:id="estadoFinal1" layoutX="93.0" layoutY="209.0" mnemonicParsing="false" text="No" />
+            <ComboBox layoutX="60.0" layoutY="272.0" prefWidth="150.0" />
          </children>
       </Pane>
    </children>

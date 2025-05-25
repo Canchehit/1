@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.TicketController">
+<AnchorPane id="AnchorPane" prefHeight="390.0" prefWidth="734.0" style="-fx-background-color: #FFDE59;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets1.TicketController">
     <stylesheets>
-        <URL value="@ticket.css"/>
+        <URL value="@ticket.css" />
     </stylesheets>
-    <TextField fx:id="descripcionInput" promptText="Descripción del ticket" />
-<HBox spacing="10">
-    <Button text="Agregar Ticket" onAction="#onAgregarTicket" />
-    <Button text="Atender Ticket" onAction="#onAtenderTicket" />
-</HBox>
+    <TextField fx:id="descripcionInput" layoutX="26.0" layoutY="247.0" promptText="Descripción del ticket" />
+<HBox spacing="10" />
 
-<Label text="Tickets pendientes:" />
-<ListView fx:id="listaTickets" prefHeight="150" />
+<Label layoutX="26.0" layoutY="146.0" text="Tickets pendientes:" />
 
-<Label fx:id="labelTicketActual" text="Ticket actual: Ninguno" />
-<TextArea fx:id="descripcionArea" prefHeight="100" />
+<Label fx:id="labelTicketActual" layoutX="250.0" layoutY="146.0" text="Ticket actual: Ninguno" />
 
-<HBox spacing="10">
-    <Button text="Guardar Cambio" onAction="#onGuardarCambio" />
-    <Button text="Deshacer Cambio" onAction="#onDeshacerCambio" />
-</HBox>
+<HBox spacing="10" />
+ <Button layoutX="29.0" layoutY="288.0" onAction="#onGuardarCambio" text="Guardar Cambio" />
+ <Button layoutX="26.0" layoutY="215.0" onAction="#onAtenderTicket" text="Atender Ticket" />
+ <Button layoutX="29.0" layoutY="328.0" onAction="#onDeshacerCambio" text="Deshacer Cambio" />
+ <Button layoutX="29.0" layoutY="173.0" onAction="#onAgregarTicket" text="Agregar Ticket" />
+   <Pane layoutX="2.0" prefHeight="131.0" prefWidth="734.0" style="-fx-background-color: #F8B85A;">
+      <children>
+         <Label layoutX="43.0" layoutY="11.0" prefHeight="110.0" prefWidth="303.0" text="Ticket">
+            <font>
+               <Font name="Bauhaus 93" size="96.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="131.0" fitWidth="225.0" layoutX="495.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@imagenes/image-removebg-preview.png" />
+            </image>
+         </ImageView>
+      </children>
+   </Pane>
+   <Button fx:id="btnVolver" layoutX="591.0" layoutY="354.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="Menu" />
 
 </AnchorPane>
