@@ -68,7 +68,7 @@ public class EstadoTicketsController extends Application {
         mostrarAlerta("Éxito", "Estado guardado correctamente.");
     }
 
-    // Acción para cancelar el proceso
+
     @FXML
     private void cancelar() {
         nombreEstado.clear();
@@ -77,7 +77,7 @@ public class EstadoTicketsController extends Application {
         listaEstadosSiguientes.getSelectionModel().clearSelection();
     }
 
-    // Acción para eliminar un estado
+    // Boton para eliminar un estado
     @FXML
     private void eliminarEstado() {
         String nombre = nombreEstado.getText().trim();
@@ -94,7 +94,7 @@ public class EstadoTicketsController extends Application {
         stage.setScene(new Scene(root));
         stage.show();
     }
-    // Método para mostrar alertas
+   
     private void mostrarAlerta(String titulo, String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setTitle(titulo);

@@ -52,7 +52,7 @@ public class ParametrosController extends Application {
         logoPreview.setFitWidth(100);
         btnCargarLogo = new Button("Cargar Logo");
         btnCargarLogo.setOnAction(e -> cargarLogo());
-
+//Cambio de idiomas
         idiomaComboBox = new ComboBox<>();
         idiomaComboBox.getItems().addAll("Español", "Inglés");
         idiomaComboBox.setValue("Español");

@@ -7,6 +7,8 @@ package sistematickets1;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.ResourceBundle;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -20,6 +22,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
@@ -33,11 +36,14 @@ import javafx.stage.Stage;
 public class GestionarTicketsController extends Application{
      @FXML
     private Button  btnVolver;
+     
+    
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Gestión de Tickets");
         
-        // Elementos de la UI
+      
+        // Elementos 
         Label titleLabel = new Label("Título:");
         TextField titleField = new TextField();
         

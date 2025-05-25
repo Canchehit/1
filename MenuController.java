@@ -23,7 +23,7 @@ public class MenuController extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Menú Principal");
         
- 
+ //botones
         Button btnParametros = new Button("Parámetros");
         Button btnRolesPermisos = new Button("Roles y Permisos");
         Button btnDepartamentos = new Button("Departamentos o Áreas");

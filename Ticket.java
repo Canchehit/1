@@ -15,6 +15,7 @@ public class Ticket {
     private int id;
     private String descripcion;
     private Stack<String> historial = new Stack<>();
+    private String conexion;
 
     public Ticket(int id, String descripcion) {
         this.id = id;
@@ -25,6 +26,10 @@ public class Ticket {
         return id;
     }
 
+    public String getconexion() {
+        return conexion;
+    }
+    
     public String getDescripcion() {
         return descripcion;
     }
@@ -39,6 +44,8 @@ public class Ticket {
             this.descripcion = historial.pop();
         }
     }
+
+   
 
     
 

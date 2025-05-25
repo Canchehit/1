@@ -54,7 +54,7 @@ public class ListaSolicitudesController extends Application {
         );
         ticketTable.setItems(ticketList);
         
-        // Filtros
+       
         TextField searchField = new TextField();
         searchField.setPromptText("Buscar por número de ticket");
         ComboBox<String> statusFilter = new ComboBox<>(FXCollections.observableArrayList("Pendiente", "En proceso", "Escalado", "Cerrado"));
@@ -113,7 +113,7 @@ public class ListaSolicitudesController extends Application {
     private String prioridad;
     private String descripcion;
 
-    // Constructor correcto con los 6 parámetros
+    // Constructor 
     public Tickets(String id, String estado, String fecha, String departamento, String prioridad, String descripcion) {
         this.id = id;
         this.estado = estado;
@@ -123,7 +123,7 @@ public class ListaSolicitudesController extends Application {
         this.descripcion = descripcion;
     }
     public String getNumber() {
-    return id; // Suponiendo que el número del ticket es el ID
+    return id; 
 }
 
 public String getStatus() {
