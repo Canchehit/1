@@ -3,21 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package DAO;
+
 import sistematickets1.*;
-import java.sql.*;
-import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.postgresql.ds.PGSimpleDataSource;
 
-
-public class TicketDAO {
-     public void create(Ticket e) {
+/**
+ *
+ * @author luisa
+ */
+public class CambiarNotaTicketDAO {
+    public void create(Ticket e) {
         String sql = """ 
-                INSERT INTO Ticket(id, descripcion)
-            VALUES(?,?,?)
+                INSERT INTO Ticket(ticketNumber, status,comments)
+            VALUES(?,?,?,?)
                 """;
 
         try (Connection conn = ticket.getConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -35,7 +38,7 @@ public class TicketDAO {
     public Ticket read(String identificacion) {
         String sql = """
                      
-        SELECT id, Descripcion
+        SELECT ticketNumber, status,comments
         FROM Ticket
         WHERE id = ?
         """;
@@ -47,8 +50,9 @@ public class TicketDAO {
          try (ResultSet rs = ps.executeQuery()){
          if (rs.next()){
          Ticket e = new Ticket();
-         e.setid(rs.getString("id"));
-         e.setDescripcion(rs.getString("Descripcion"));
+         e.setticketNumber(rs.getString("ticketNumber"));
+         e.setstatus(rs.getString("status"));
+         e.setcomments(rs.getString("comments"));
         
          return e;
          }
@@ -62,4 +66,5 @@ public class TicketDAO {
         
         
         return null;
+}
 }

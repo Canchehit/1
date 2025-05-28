@@ -3,24 +3,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package DAO;
-import sistematickets1.*;
-import java.sql.*;
-import java.sql.DriverManager;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.postgresql.ds.PGSimpleDataSource;
+import sistematickets1.Conexion;
 
-
-public class TicketDAO {
-     public void create(Ticket e) {
+/**
+ *
+ * @author luisa
+ */
+public class EstadoTicketsDAO {
+    public void create(EstadoTicketsController e) {
         String sql = """ 
-                INSERT INTO Ticket(id, descripcion)
-            VALUES(?,?,?)
+                INSERT INTO Ticket(nombreEstado, descripcionEstadoo,estadoFinal,listaEstadosSiguientes)
+            VALUES(?,?,?,?)
                 """;
 
-        try (Connection conn = ticket.getConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
+        try (Connection conn = EstadoTicketsController.getConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setInt(1, e.getid());
             
@@ -32,10 +35,10 @@ public class TicketDAO {
         }
     }
 
-    public Ticket read(String identificacion) {
+    public EstadoTicketsController read(String identificacion) {
         String sql = """
                      
-        SELECT id, Descripcion
+        SELECT nombreEstado, descripcionEstadoo,estadoFinal,listaEstadosSiguientes
         FROM Ticket
         WHERE id = ?
         """;
@@ -46,9 +49,11 @@ public class TicketDAO {
         
          try (ResultSet rs = ps.executeQuery()){
          if (rs.next()){
-         Ticket e = new Ticket();
-         e.setid(rs.getString("id"));
-         e.setDescripcion(rs.getString("Descripcion"));
+         EstadoTicketsController e = new EstadoTicketsController();
+         e.setnombreEstado(rs.getString("nombreEstado"));
+         e.setdescripcionEstado(rs.getString("descripcionEstado"));
+         e.setestadoFinalrs.getString("estadoFinal"));
+         e.setlistaEstadosSiguientes(rs.getString("listaEstadosSiguientes"));
         
          return e;
          }
@@ -62,4 +67,5 @@ public class TicketDAO {
         
         
         return null;
+}
 }
